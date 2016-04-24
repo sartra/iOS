@@ -26,10 +26,14 @@ class ViewController: UIViewController, UIScrollViewDelegate {  // conforming to
         self.imagesScroll.addSubview(firstSlide)
         
         let secondSlide = UIView(frame: CGRect(x: 200, y: 0, width: 200, height: 200))
-        firstSlide.backgroundColor = UIColor.greenColor()
+        secondSlide.backgroundColor = UIColor.greenColor()
         self.imagesScroll.addSubview(secondSlide)
         
-        self.imagesScroll.contentSize = CGSize(width: 400, height: 0)
+        let thirdSlide = UIView(frame: CGRect(x: 400, y: 0, width: 200, height: 200))
+        thirdSlide.backgroundColor = UIColor.orangeColor()
+        self.imagesScroll.addSubview(thirdSlide)
+        
+        self.imagesScroll.contentSize = CGSize(width: 600, height: 0)
         self.imagesScroll.delegate = self
     }
     
@@ -38,14 +42,24 @@ class ViewController: UIViewController, UIScrollViewDelegate {  // conforming to
         
         let offset = scrollView.contentOffset.x
         
-        if (offset > 100){
-            self.view.backgroundColor = UIColor.redColor()
-        }
-        else {
-            self.view.backgroundColor = UIColor.lightGrayColor()
-        }
         
 //        print("scrollViewDidScroll: \(offset)")
+        
+        if (offset < 100){
+            print("First Page")
+            self.view.backgroundColor = UIColor.lightGrayColor()
+            self.pageContol.currentPage = 0
+        }
+        else if (offset < 300){
+            print("Second Page")
+            self.view.backgroundColor = UIColor.redColor()
+            self.pageContol.currentPage = 1
+        }
+        else {
+            print("Third Page")
+            self.view.backgroundColor = UIColor.yellowColor()
+            self.pageContol.currentPage = 2
+        }
     }
 
     
@@ -54,14 +68,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {  // conforming to
         let offset = scrollView.contentOffset.x
         print("scrollViewDidEndDecelerating: \(offset)")
         
-        if (offset == 0){
-            print("First Page")
-            self.pageContol.currentPage = 0
-        }
-        if (offset == 200){
-            print("Second Page")
-            self.pageContol.currentPage = 1
-        }
+    
     }
 
     
@@ -81,7 +88,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {  // conforming to
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 

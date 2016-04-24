@@ -22,6 +22,9 @@
                                 <state key="normal" title="Add">
                                     <color key="titleColor" red="0.42193062022810335" green="0.47501754873832325" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addName" destination="BYZ-38-t0r" eventType="touchUpInside" id="S10-rv-SIc"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J9e-XL-B2T">
                                 <rect key="frame" x="215" y="120" width="170" height="30"/>
@@ -42,6 +45,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vg3-bz-7ag"/>
+                    <connections>
+                        <outlet property="nameField" destination="J9e-XL-B2T" id="Ril-1d-UD4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

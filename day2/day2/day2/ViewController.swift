@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIScrollViewDelegate {  // conforming to the 'delegate protocol'
+class ViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegate {  // conforming to the 'delegate protocol'
     
     @IBOutlet var nameField: UITextField!
 
@@ -20,6 +20,12 @@ class ViewController: UIViewController, UIScrollViewDelegate {  // conforming to
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.nameField.delegate = self
+        let action = #selector(ViewController.showListView(_:))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next",
+                                                                 style: .Plain,
+                                                                 target: self,
+                                                                 action: action)
         
         let firstSlide = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         firstSlide.backgroundColor = UIColor.blueColor()
@@ -38,6 +44,16 @@ class ViewController: UIViewController, UIScrollViewDelegate {  // conforming to
     }
     
     
+    func showListView(btn: UIBarButtonItem){
+        
+        let listView = ListViewController()   // this allows the other view (listViewController) to be accessible 
+        listView.namesArray = self.namesArray
+        self.navigationController?.pushViewController(listView, animated:true)
+        
+        print("showListView: ")
+    }
+    
+    
     func scrollViewDidScroll(scrollView: UIScrollView) {  // control click on UIScrollViewDelegate up top
         
         let offset = scrollView.contentOffset.x
@@ -46,17 +62,17 @@ class ViewController: UIViewController, UIScrollViewDelegate {  // conforming to
 //        print("scrollViewDidScroll: \(offset)")
         
         if (offset < 100){
-            print("First Page")
+//            print("First Page")
             self.view.backgroundColor = UIColor.lightGrayColor()
             self.pageContol.currentPage = 0
         }
         else if (offset < 300){
-            print("Second Page")
+//            print("Second Page")
             self.view.backgroundColor = UIColor.redColor()
             self.pageContol.currentPage = 1
         }
         else {
-            print("Third Page")
+//            print("Third Page")
             self.view.backgroundColor = UIColor.yellowColor()
             self.pageContol.currentPage = 2
         }
@@ -67,9 +83,40 @@ class ViewController: UIViewController, UIScrollViewDelegate {  // conforming to
     func scrollViewDidEndDecelerating(scrollView: UIScrollView){  // when the scrolling is ended
         let offset = scrollView.contentOffset.x
         print("scrollViewDidEndDecelerating: \(offset)")
-        
-    
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool { // function has to return a boolean value T/F
+        print("textFieldShouldReturn: ")
+        textField.resignFirstResponder()  // make the keyboard disappear
+        return true
+    }
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool{
+        print("shouldChangeCharactersInRange: \(string)")
+        
+        if (string=="a"){
+            self.view.backgroundColor = UIColor.redColor()
+        }
+        else if(string=="e"){
+            self.view.backgroundColor = UIColor.redColor()
+        }
+        else if(string=="i"){
+            self.view.backgroundColor = UIColor.redColor()
+        }
+        else if(string=="o"){
+            self.view.backgroundColor = UIColor.redColor()
+        }
+        else if(string=="u"){
+            self.view.backgroundColor = UIColor.redColor()
+        }
+        else{
+            self.view.backgroundColor = UIColor.lightGrayColor()
+        }
+        
+        return true
+        
+    }
+   
 
     
     @IBAction func addName(){

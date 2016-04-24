@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var nameField: UITextField!
 
+    var namesArray = Array<String>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func addName(){
-        print("addName: ")
+        
+        let name = self.nameField.text
+        if (name?.characters.count == 0){
+            return // nothing entered so ignore input
+        }
+        self.namesArray.append(name!)
+        self.nameField.text = "" //clear text field
+        print("addName: \(self.namesArray)")
     }
 
     override func didReceiveMemoryWarning() {

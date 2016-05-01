@@ -9,6 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBAction func btnMoviesTapped(){
+        print("btnMoviesTapped")
+        
+        
+        let movieVc = MovieListViewController()
+        self.navigationController?.pushViewController(movieVc, animated: true)
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

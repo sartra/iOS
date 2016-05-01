@@ -9,5 +9,10 @@
 import UIKit
 
 class Movie: NSObject {
-
+    var title: String!
+    var year: String!
+    var leadActor: String!
+    var image: String!
+    var summary: String!
+    
 }

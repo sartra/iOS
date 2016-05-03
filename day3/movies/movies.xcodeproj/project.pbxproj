@@ -20,6 +20,12 @@
 		155A10491CD65C6400FA38F8 /* toystory@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 155A10451CD65C6400FA38F8 /* toystory@2x.png */; };
 		155A104B1CD65E6300FA38F8 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155A104A1CD65E6300FA38F8 /* BlueViewController.swift */; };
 		15C5BB851CD68C6700E69FC8 /* hungergames@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15C5BB841CD68C6700E69FC8 /* hungergames@2x.png */; };
+		15C5BB871CD68FCB00E69FC8 /* BandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C5BB861CD68FCB00E69FC8 /* BandsViewController.swift */; };
+		15C5BB891CD6906300E69FC8 /* Bands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C5BB881CD6906300E69FC8 /* Bands.swift */; };
+		15C5BB8B1CD6985000E69FC8 /* BandsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C5BB8A1CD6985000E69FC8 /* BandsDetailViewController.swift */; };
+		15C5BB8F1CD69FA000E69FC8 /* catpower@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15C5BB8C1CD69FA000E69FC8 /* catpower@2x.png */; };
+		15C5BB901CD69FA000E69FC8 /* jonasbrothers@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15C5BB8D1CD69FA000E69FC8 /* jonasbrothers@2x.png */; };
+		15C5BB911CD69FA000E69FC8 /* rollingstones@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15C5BB8E1CD69FA000E69FC8 /* rollingstones@2x.png */; };
 		68E962F1C01BEDC15BE30B02 /* Pods_movies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E2AA65BE5709F5D100B0614 /* Pods_movies.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +46,12 @@
 		155A10451CD65C6400FA38F8 /* toystory@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toystory@2x.png"; sourceTree = "<group>"; };
 		155A104A1CD65E6300FA38F8 /* BlueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
 		15C5BB841CD68C6700E69FC8 /* hungergames@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hungergames@2x.png"; sourceTree = "<group>"; };
+		15C5BB861CD68FCB00E69FC8 /* BandsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandsViewController.swift; sourceTree = "<group>"; };
+		15C5BB881CD6906300E69FC8 /* Bands.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bands.swift; sourceTree = "<group>"; };
+		15C5BB8A1CD6985000E69FC8 /* BandsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandsDetailViewController.swift; sourceTree = "<group>"; };
+		15C5BB8C1CD69FA000E69FC8 /* catpower@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "catpower@2x.png"; sourceTree = "<group>"; };
+		15C5BB8D1CD69FA000E69FC8 /* jonasbrothers@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jonasbrothers@2x.png"; sourceTree = "<group>"; };
+		15C5BB8E1CD69FA000E69FC8 /* rollingstones@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rollingstones@2x.png"; sourceTree = "<group>"; };
 		8C0AE6BDE89DB53EBDE15CF0 /* Pods-movies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-movies/Pods-movies.debug.xcconfig"; sourceTree = "<group>"; };
 		B6A021D75D67DCD0926D4348 /* Pods-movies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movies.release.xcconfig"; path = "Pods/Target Support Files/Pods-movies/Pods-movies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +93,8 @@
 				155A10411CD65C6400FA38F8 /* images */,
 				155A10191CD6464800FA38F8 /* ViewController.swift */,
 				155A104A1CD65E6300FA38F8 /* BlueViewController.swift */,
+				15C5BB8A1CD6985000E69FC8 /* BandsDetailViewController.swift */,
+				15C5BB861CD68FCB00E69FC8 /* BandsViewController.swift */,
 				155A10291CD647FE00FA38F8 /* MovieListViewController.swift */,
 				155A101B1CD6464800FA38F8 /* Main.storyboard */,
 				155A101E1CD6464800FA38F8 /* Assets.xcassets */,
@@ -95,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				155A102C1CD6527700FA38F8 /* Movie.swift */,
+				15C5BB881CD6906300E69FC8 /* Bands.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -102,6 +117,9 @@
 		155A10411CD65C6400FA38F8 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				15C5BB8C1CD69FA000E69FC8 /* catpower@2x.png */,
+				15C5BB8D1CD69FA000E69FC8 /* jonasbrothers@2x.png */,
+				15C5BB8E1CD69FA000E69FC8 /* rollingstones@2x.png */,
 				155A10421CD65C6400FA38F8 /* avatar@2x.png */,
 				15C5BB841CD68C6700E69FC8 /* hungergames@2x.png */,
 				155A10431CD65C6400FA38F8 /* godfather@2x.png */,
@@ -191,11 +209,14 @@
 			files = (
 				155A10221CD6464800FA38F8 /* LaunchScreen.storyboard in Resources */,
 				155A10471CD65C6400FA38F8 /* godfather@2x.png in Resources */,
+				15C5BB8F1CD69FA000E69FC8 /* catpower@2x.png in Resources */,
+				15C5BB901CD69FA000E69FC8 /* jonasbrothers@2x.png in Resources */,
 				155A10481CD65C6400FA38F8 /* junglebook@2x.png in Resources */,
 				155A10461CD65C6400FA38F8 /* avatar@2x.png in Resources */,
 				155A101F1CD6464800FA38F8 /* Assets.xcassets in Resources */,
 				15C5BB851CD68C6700E69FC8 /* hungergames@2x.png in Resources */,
 				155A101D1CD6464800FA38F8 /* Main.storyboard in Resources */,
+				15C5BB911CD69FA000E69FC8 /* rollingstones@2x.png in Resources */,
 				155A10491CD65C6400FA38F8 /* toystory@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,7 +280,10 @@
 				155A101A1CD6464800FA38F8 /* ViewController.swift in Sources */,
 				155A102D1CD6527700FA38F8 /* Movie.swift in Sources */,
 				155A104B1CD65E6300FA38F8 /* BlueViewController.swift in Sources */,
+				15C5BB8B1CD6985000E69FC8 /* BandsDetailViewController.swift in Sources */,
 				155A10181CD6464800FA38F8 /* AppDelegate.swift in Sources */,
+				15C5BB891CD6906300E69FC8 /* Bands.swift in Sources */,
+				15C5BB871CD68FCB00E69FC8 /* BandsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

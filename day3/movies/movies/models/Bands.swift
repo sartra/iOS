@@ -9,5 +9,9 @@
 import UIKit
 
 class Bands: NSObject {
-
+    var title: String!
+    var country: String!
+    var image: String!
+    var leadSinger: String!
+    var tour: String!
 }

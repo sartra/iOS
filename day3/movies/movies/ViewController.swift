@@ -13,11 +13,18 @@ class ViewController: UIViewController {
     @IBAction func btnMoviesTapped(){
         print("btnMoviesTapped")
         
-        
         let movieVc = MovieListViewController()
         self.navigationController?.pushViewController(movieVc, animated: true)
+    }
+    
+    @IBAction func btnBandsTapped(){
+        print("btnBandsTapped")
+        
+        let bandsVc = BandsViewController()
+        self.navigationController?.pushViewController(bandsVc, animated: true)
         
     }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

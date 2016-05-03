@@ -24,10 +24,19 @@
                                     <action selector="btnMoviesTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="L8T-Bu-0Cx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHl-zp-sTz">
+                                <rect key="frame" x="277" y="210" width="46" height="30"/>
+                                <state key="normal" title="bands"/>
+                                <connections>
+                                    <action selector="btnBandsTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="A7O-Vf-atK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="EAr-y4-JmV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4eH-jU-pN5"/>
+                            <constraint firstItem="KHl-zp-sTz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EBT-8F-7iw"/>
+                            <constraint firstItem="KHl-zp-sTz" firstAttribute="top" secondItem="EAr-y4-JmV" secondAttribute="bottom" constant="64" id="aS0-Do-MRv"/>
                             <constraint firstItem="EAr-y4-JmV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="96" id="hSV-lU-6qp"/>
                         </constraints>
                     </view>

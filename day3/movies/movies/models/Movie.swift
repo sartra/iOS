@@ -16,3 +16,4 @@ class Movie: NSObject {
     var summary: String!
     
 }
+

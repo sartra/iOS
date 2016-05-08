@@ -9,6 +9,7 @@
 import UIKit
 
 class BandsDetailViewController: UIViewController {
+    
     var selectedBand: Bands!
     
     

@@ -29,7 +29,7 @@ class ShowSummaryViewController: UIViewController, UITableViewDataSource, UITabl
         
         
         let showImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-//        showImage.image = UIImage(named: self.selectedShow.image)
+//      showImage.image = UIImage(named: self.selectedShow.image)
         showImage.backgroundColor = .greenColor()
         showImage.center = CGPoint(x: 0.5*frame.size.width, y: 100)
         showImage.layer.borderColor = UIColor.whiteColor().CGColor
@@ -60,7 +60,7 @@ class ShowSummaryViewController: UIViewController, UITableViewDataSource, UITabl
         lblSummary.numberOfLines = 0  //unlimited number of lines
         view.addSubview(lblSummary)
         
-        y = y+lblSummary.frame.size.height
+        y = y+lblSummary.frame.size.height + 20
         
         let tableFrame = CGRect(x: 0, y: y, width: frame.size.width, height: frame.size.height)
         
@@ -97,8 +97,11 @@ class ShowSummaryViewController: UIViewController, UITableViewDataSource, UITabl
         
     }
     
-  
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?{
+        return "Cast Members"
+    }
     
+  
     
 
     override func viewDidLoad() {
